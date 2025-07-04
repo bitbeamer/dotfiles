@@ -50,3 +50,4 @@ au BufNewFile, BufRead *.py
 let g:ale_linters = {'python': ['flake8']}
 
 set number
+  ~ ❯
