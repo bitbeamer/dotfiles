@@ -120,6 +120,11 @@ export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 alias uvr="uv run"
 alias uvm="uv run python manage.py"
 alias uva="source .venv/bin/activate"
+alias jjc='jj commit -m'
+jjp() {
+  jj bookmark set "$1" -r @- && jj git push
+}
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
