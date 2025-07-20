@@ -10,7 +10,7 @@ BACKUP_DIR="$HOME/dotfiles_backup_$(date +%Y%m%d_%H%M%S)"
 mkdir -p "$BACKUP_DIR"
 
 # List of files and directories to symlink (add your dotfiles and directories here)
-FILES=".bashrc .vimrc .gitconfig .vim"  # Include directories like .vim
+FILES=".zshrc .vimrc .tmux.conf .vim"  # Include directories like .vim
 
 for file in $FILES; do
     # Check if the source exists in the dotfiles repo
