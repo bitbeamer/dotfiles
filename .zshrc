@@ -77,11 +77,9 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -115,7 +113,10 @@ export TERM=xterm-256color
 export PATH=/opt/homebrew/bin/:$PATH
 export LC_CTYPE="en_US.UTF-8"
 
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export HISTSIZE=10000
+export SAVEHIST=10000
+export HISTFILE=~/.zsh_history
+export UV_NATIVE_TLS=true
 
 alias uvr="uv run"
 alias uvm="uv run python manage.py"
@@ -147,3 +148,9 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
   fd --type=d --hidden --exclude .git . "$1"
 }
+
+# Explicitly unbind and rebind Tab
+#bindkey -r '^I'  # Remove any existing Tab binding
+#bindkey '^@' autosuggest-accept  # Ctrl-Space
+#bindkey '^I' expand-or-complete  # Tab for completion
+

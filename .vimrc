@@ -11,3 +11,4 @@ set foldlevel=99
 nnoremap <space> za
 
 set number
+set relativenumber
