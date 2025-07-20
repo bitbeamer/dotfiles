@@ -122,6 +122,7 @@ alias uvr="uv run"
 alias uvm="uv run python manage.py"
 alias uva="source .venv/bin/activate"
 alias jjc='jj commit -m'
+alias jjd='jj diff -r @-'
 jjp() {
   jj bookmark set "$1" -r @- && jj git push
 }
