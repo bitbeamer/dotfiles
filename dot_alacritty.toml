@@ -1,0 +1,20 @@
+general.import = [
+    "~/.config/alacritty/themes/themes/base16_default_dark.toml"
+]
+
+[window]
+dimensions = { columns = 256, lines = 64 }
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[font]
+size = 15.0
+#normal = { family = "FiraCode Nerd Font Mono", style = "Retina" }
+normal = { family = "JetBrainsMono Nerd Font", style = "Light" }
+#offset = { x = 0, y = 1 }
+
+[cursor]
+style = "Block"
+unfocused_hollow = true
+
