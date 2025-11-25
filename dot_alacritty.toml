@@ -4,6 +4,7 @@ general.import = [
 
 [window]
 dimensions = { columns = 256, lines = 64 }
+decorations = "Buttonless"
 
 [colors]
 draw_bold_text_with_bright_colors = true
